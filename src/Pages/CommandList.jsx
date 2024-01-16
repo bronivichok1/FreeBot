@@ -15,11 +15,8 @@ let CommandList=[syze]
       <main>
         <h1 align="center">CommandList<br/>
             <ul>
-                <li>
-{while (i<syze) {
-    CommandList[i]
-    i++
-}
+              <li>
+
               </li>
             </ul>
         </h1>
