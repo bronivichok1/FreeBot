@@ -5,7 +5,7 @@ import styles from '../Style/App_module.css'
 import { redirect } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Link, BrowserRouter, Routes, Route,Navigate,useNavigate } from 'react-router-dom';
 import Registrate from './Registrate';
 
 
@@ -39,7 +39,7 @@ import Registrate from './Registrate';
                   <Route path="Registrate" element={<Registrate/>} />
                 </Routes>
               </BrowserRouter>
-            <button >
+            <button onClick={}>
               Registrate
             </button>
           </h1>
