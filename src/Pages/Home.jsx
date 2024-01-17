@@ -5,7 +5,7 @@ import { redirect } from 'react-router-dom';
 
 
 
- export default function App() {
+ function Home() {
   return (
     <div >
       <Header></Header>
@@ -24,3 +24,4 @@ import { redirect } from 'react-router-dom';
     </div>
   )
 }
+export default withAuth(Home)

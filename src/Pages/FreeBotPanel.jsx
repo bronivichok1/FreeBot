@@ -3,10 +3,11 @@ import Button from '../Components/Button.jsx'
 import InputData from '../Components/InputData'
 import styles from '../Style/App_module.css'
 import { redirect } from 'react-router-dom';
+import { withAuth } from '../HOC/withAuth';
 
 
 
- export default function App() {
+  function FreeBorPanel() {
   return (
     <div >
       <Header></Header>
@@ -26,3 +27,4 @@ import { redirect } from 'react-router-dom';
     </div>
   )
 }
+export default withAuth(FreeBorPanel)

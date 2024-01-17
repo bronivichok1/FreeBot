@@ -6,9 +6,10 @@ import { redirect } from 'react-router-dom';
 
 const syze=10
 let i=0
-let CommandList=[syze]
+let CommandListArray=[syze]
 
- export default function App() {
+function CommandList() {
+
   return (
     <div >
       <Header></Header>
@@ -24,5 +25,5 @@ let CommandList=[syze]
     </div>
   )
 }
-
+export default withAuth(CommandList)
 
