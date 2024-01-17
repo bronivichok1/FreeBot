@@ -39,7 +39,7 @@ import Registrate from './Registrate';
                   <Route path="Registrate" element={<Registrate/>} />
                 </Routes>
               </BrowserRouter>
-            <button onClick={}>
+            <button >
               Registrate
             </button>
           </h1>
