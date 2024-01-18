@@ -9,7 +9,6 @@ import { withAuth } from '../HOC/withAuth';
 function FreeBorPanel() {
   return (
     <div >
-      <Header></Header>
       <main>
           <h1 className={styles.item} align="center">
             FreeBotPanel

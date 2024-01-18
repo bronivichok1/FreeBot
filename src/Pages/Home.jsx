@@ -10,11 +10,11 @@ import { openInNewTab } from '../providers/OpenAdress';
   return (
     
     <div >
-      <Header/>
       <main>
           <div className={styles.item} align="center">
               <br/>
-              Profile
+              PROFILE
+              <br/>
               <br/>
               <button onClick={() => openInNewTab('/FreeBotPanel')}>
                 FreeBotPanel

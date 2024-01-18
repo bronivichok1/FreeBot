@@ -12,7 +12,6 @@ function CommandList() {
 
   return (
     <div >
-      <Header></Header>
       <main>
         <h1 align="center">CommandList<br/>
             <ul>
