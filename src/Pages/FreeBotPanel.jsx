@@ -6,8 +6,7 @@ import { redirect } from 'react-router-dom';
 import { withAuth } from '../HOC/withAuth';
 
 
-
-  function FreeBorPanel() {
+function FreeBorPanel() {
   return (
     <div >
       <Header></Header>
@@ -27,4 +26,5 @@ import { withAuth } from '../HOC/withAuth';
     </div>
   )
 }
+
 export default withAuth(FreeBorPanel)

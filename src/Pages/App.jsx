@@ -7,10 +7,13 @@ import { useContext } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import { Link, BrowserRouter, Routes, Route,Navigate,useNavigate } from 'react-router-dom';
 import Registrate from './Registrate';
+import Login from './Login';
+import CommandList from './CommandList';
+import Timer from './Timer';
+import Home from './Home';
+import FreeBotPanel from './FreeBotPanel';
 
-
- function App() {
-  const {user,setUser}=useContext(AuthContext)
+function App() {
   return (
     <div >
       <Header></Header>
@@ -18,31 +21,17 @@ import Registrate from './Registrate';
           <h1 className={styles.item} align="center">
             FreeBot
           </h1 >
-          <h1 align="center">Login<br/>
-            <InputData title="Login"></InputData>
-            <InputData title="Password"> </InputData>
-            {user?(
-              <>
-                <h1>
-                  Welcom. {user.name}!
-                </h1>
-                <button onClick={()=>setUser(null)}>
-                  Logout
-                </button>
-              </>): <button onClick={()=>setUser({name:"Lesha"})}>
-                  Login
-                </button>
-              }
-              
-              <BrowserRouter>
-                <Routes>
-                  <Route path="Registrate" element={<Registrate/>} />
-                </Routes>
-              </BrowserRouter>
-            <button >
-              Registrate
-            </button>
-          </h1>
+          <BrowserRouter>
+            <Routes>
+              <Route path="Login" element={<Login/>} />
+              <Route path="Registrate" element={<Registrate/>} />
+              <Route path="CommandList" element={<CommandList/>} />
+              <Route path="Timer" element={<Timer/>} />
+              <Route path="Home" element={<Home/>} />
+              <Route path="FreeBotPanel" element={<FreeBotPanel/>} />
+
+            </Routes>
+          </BrowserRouter>
       </main>
     </div>
   )

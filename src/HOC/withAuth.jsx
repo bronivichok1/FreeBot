@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { AuthContext } from "../providers/AuthProvider"
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import App from '../index'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Login from '../Pages/Login'
 
 export const withAuth=(Components)=>(props)=>{
         const {user,setUser }=useContext(AuthContext)
@@ -10,7 +10,7 @@ export const withAuth=(Components)=>(props)=>{
         <p>You are not authorized to view this page
                     <BrowserRouter>
                         <Routes>
-                            <Route path="*" element={<App/>} />
+                            <Route path="*" element={<Login/>} />
                         </Routes>
                     </BrowserRouter>
         </p>

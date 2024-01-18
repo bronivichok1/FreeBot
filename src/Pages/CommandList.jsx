@@ -3,7 +3,7 @@ import Button from '../Components/Button.jsx'
 import InputData from '../Components/InputData'
 import styles from '../Style/App_module.css'
 import { redirect } from 'react-router-dom';
-
+import { withAuth } from '../HOC/withAuth';
 const syze=10
 let i=0
 let CommandListArray=[syze]

@@ -2,7 +2,7 @@ import Header from '../Components/Header'
 import Button from '../Components/Button.jsx'
 import styles from '../Style/App_module.css'
 import { redirect } from 'react-router-dom';
-
+import { withAuth } from '../HOC/withAuth';
 
 
  function Home() {

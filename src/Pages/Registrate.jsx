@@ -9,19 +9,18 @@ import { AuthContext } from '../providers/AuthProvider';
 
 
  function Registrate() {
+  const red = () => {
+    redirect('/login');
+  }
 
   return (
     <div >
-      <Header></Header>
       <main>
-          <h1 className={styles.item} align="center">
-            FreeBot
-          </h1 >
         <h1 align="center">Registrate<br/>
             <InputData title="mail"></InputData>
             <InputData title="Login"></InputData>
             <InputData title="Password"> </InputData>
-            <button onClick={redirect("/App")}>
+            <button onClick={red}>
               Registrate
             </button>
         </h1>
