@@ -7,7 +7,7 @@ export default function Header(){
     return(
     <header> 
         <div className={styles.item}>
-            <img src='./logo.jpg' alt="FreeBot"   />
+            <img src='logo.jpg' alt="FreeBot"   />
             <span>Время сейчас: {dataTime.toLocaleTimeString()}</span>   
         </div>
         <h1 align="right" vertical-align="top">
