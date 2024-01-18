@@ -9,7 +9,7 @@ import { Link, BrowserRouter, Routes, Route,Navigate,useNavigate } from 'react-r
 import Registrate from './Registrate';
 
 
- function AppHome() {
+ function AuthHome() {
   const {user,setUser}=useContext(AuthContext)
   return (
     <div >

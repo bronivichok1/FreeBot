@@ -24,4 +24,4 @@ import { withAuth } from '../HOC/withAuth';
     </div>
   )
 }
-export default withAuth(Home)
+export default Home

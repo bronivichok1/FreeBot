@@ -9,6 +9,9 @@ import React from  'react';
 
 
 function Login() {
+    const openInNewTab = (url) => {
+    window.open(url, '_blank', 'noreferrer');
+  };
 
     const {user,setUser}=useContext(AuthContext)
     const [inputLogin, setInputLogin] = useState('');
@@ -46,11 +49,11 @@ function Login() {
                 <button onClick={()=>setUser(null)}>
                   Logout
                 </button>
-              </>): <button type="submit" value="Login"  onClick={()=>setUser({name:"Lesha"})&&addData}  >
+              </>): <button type="submit" value="Login"  onClick={()=>setUser({name:"Lesha"})&&addData} >
                   Login
                 </button>
               }
-            <button >
+            <button type="submit" value="Registrate" onClick={() => openInNewTab('/Registrate')}>
               Registrate
             </button>
         </div>

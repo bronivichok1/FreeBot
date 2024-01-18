@@ -10,7 +10,7 @@ export const withAuth=(Components)=>(props)=>{
         <p>You are not authorized to view this page
                     <BrowserRouter>
                         <Routes>
-                            <Route path="*" element={<Login/>} />
+                            <Route path="/" element={<Login/>} />
                         </Routes>
                     </BrowserRouter>
         </p>
