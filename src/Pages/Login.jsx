@@ -49,7 +49,7 @@ function Login() {
                 <button onClick={()=>setUser(null)}>
                   Logout
                 </button>
-              </>): <button type="submit" value="Login"  onClick={()=>setUser({name:"Lesha"})&&addData} >
+              </>): <button type="submit" value="Login"  onClick={/*()=>setUser({name:"Lesha"})&&*/addData&&(() => openInNewTab('/Home'))} >
                   Login
                 </button>
               }
