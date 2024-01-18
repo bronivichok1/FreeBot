@@ -6,14 +6,12 @@ import { redirect } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import React from  'react';
-
+import { openInNewTab } from '../providers/OpenAdress';
 
 function Login() {
-    const openInNewTab = (url) => {
-    window.open(url, '_blank', 'noreferrer');
-  };
 
     const {user,setUser}=useContext(AuthContext)
+    
     const [inputLogin, setInputLogin] = useState('');
     const [inputPassword, setInputPassword] = useState('');
   

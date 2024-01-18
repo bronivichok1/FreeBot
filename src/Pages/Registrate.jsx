@@ -6,14 +6,13 @@ import { redirect } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import React from  'react';
-
+import { openInNewTab } from '../providers/OpenAdress';
 
 
  function Registrate() {
-  const red = () => {
-    redirect('/login');
-  }
+
   const {user,setUser}=useContext(AuthContext)
+  
   const [inputMail, setInputMail] = useState('');
   const [inputLogin, setInputLogin] = useState('');
   const [inputPassword, setInputPassword] = useState('');
@@ -52,7 +51,7 @@ import React from  'react';
             onChange={(event) => setInputPassword(event.target.value)}>
             </input>
             <br/>
-            <button  type="submit" value="Login"  onClick={()=>setUser({name:"Lesha"})&&addData}>
+            <button  type="submit" value="Registrate"  onClick={(() => openInNewTab('/Login'))&&addData}>
               Registrate
             </button>
         </h1>
