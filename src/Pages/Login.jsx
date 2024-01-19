@@ -7,7 +7,7 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import React from  'react';
 import { openInNewTab } from '../providers/OpenAdress';
-
+import {User, CheckUser} from '../providers/CheckUser'
 
 function Login() {
 
@@ -21,7 +21,19 @@ function Login() {
       let newData = {
           Login: inputLogin,
           Password: inputPassword
-      };}
+      };
+      return CheckUser(newData.Login,newData.Password) 
+    }
+    function adress(){
+    if(addData==1)
+    {
+      return () => openInNewTab('/Home')
+    }
+    else{
+        return () => openInNewTab('/Login')
+    }
+
+    }
     return (
     <div >
       <main>
@@ -40,7 +52,7 @@ function Login() {
               onChange={(event) => setInputPassword(event.target.value)}>
               </input>
             <br/>
-              <button type="submit" value="Login"  onClick={/*()=>setUser({name:"Lesha"})&&*/addData&&(() => openInNewTab('/Home'))} >
+                <button type="submit" value="Login"  onClick={addData&&adress}>
               Login
               </button>
               
