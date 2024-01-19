@@ -7,7 +7,7 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import React from  'react';
 import { openInNewTab } from '../providers/OpenAdress';
-
+import {User, UserList} from '../providers/CheckUser'
 
  function Registrate() {
 
@@ -23,7 +23,9 @@ import { openInNewTab } from '../providers/OpenAdress';
         Mail: inputMail,
         Login: inputLogin,
         Password: inputPassword
-    };}
+    };
+    UserList= new User(newData.Mail,newData.Login,newData.Password)
+  }
 
   return (
     <div >
@@ -51,7 +53,7 @@ import { openInNewTab } from '../providers/OpenAdress';
             onChange={(event) => setInputPassword(event.target.value)}>
             </input>
             <br/>
-            <button  type="submit" value="Registrate"  onClick={(() => openInNewTab('/Login'))&&addData}>
+            <button  type="submit" value="Registrate"  onClick={() => openInNewTab('/Login')&&addData}>
               Registrate
             </button>
         </h1>

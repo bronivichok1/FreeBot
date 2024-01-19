@@ -8,6 +8,7 @@ import { AuthContext } from '../providers/AuthProvider';
 import React from  'react';
 import { openInNewTab } from '../providers/OpenAdress';
 
+
 function Login() {
 
     const {user,setUser}=useContext(AuthContext)
@@ -25,32 +26,24 @@ function Login() {
     <div >
       <main>
           <div align="center">Login<br/>
-            <input
-            placeholder="Enter Login"
-            value={inputLogin} 
-            title="Login" 
-            onChange={(event) => setInputLogin(event.target.value)}>
-            </input>
+              <input
+              placeholder="Enter Login"
+              value={inputLogin} 
+              title="Login" 
+              onChange={(event) => setInputLogin(event.target.value)}>
+              </input>
             <br/>
-            <input 
-            placeholder="Enter Password"
-            value={inputPassword}
-            title="Password" 
-            onChange={(event) => setInputPassword(event.target.value)}>
-            </input>
+              <input 
+              placeholder="Enter Password"
+              value={inputPassword}
+              title="Password" 
+              onChange={(event) => setInputPassword(event.target.value)}>
+              </input>
             <br/>
-            {user?(
-              <>
-                <h1>
-                  Welcom. {user.name}!
-                </h1>
-                <button onClick={()=>setUser(null)}>
-                  Logout
-                </button>
-              </>): <button type="submit" value="Login"  onClick={/*()=>setUser({name:"Lesha"})&&*/addData&&(() => openInNewTab('/Home'))} >
-                  Login
-                </button>
-              }
+              <button type="submit" value="Login"  onClick={/*()=>setUser({name:"Lesha"})&&*/addData&&(() => openInNewTab('/Home'))} >
+              Login
+              </button>
+              
             <button type="submit" value="Registrate" onClick={() => openInNewTab('/Registrate')}>
               Registrate
             </button>
