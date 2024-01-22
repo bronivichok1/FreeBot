@@ -1,0 +1,34 @@
+.controls {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.3em;
+  border-top: 2px solid #152448;
+  padding: 1em 1.4em;
+}
+
+.control-btn {
+  width: 4em;
+  height: 4em;
+  padding: 0;
+  background: transparent;
+  border-style: none;
+  cursor: pointer;
+}
+
+.control-btn svg {
+  width: 65%;
+  height: 65%;
+}
+
+.control-btn:nth-child(4) svg {
+  width: 100%;
+  height: 100%;
+}
+
+.reflected {
+  transform: scale(-1, 1);
+}
+
+.control-btn svg:hover path {
+  fill: #38bdf8;
+}

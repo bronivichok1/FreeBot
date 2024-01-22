@@ -1,0 +1,47 @@
+.track-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3em;
+  margin: 2.2em 2.4em 0.8em;
+}
+
+.track-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track-cover img {
+  width: 23em;
+  height: 23em;
+  border-radius: 0.8em;
+}
+
+.track-cover svg {
+  width: 22em;
+  height: 22em;
+  padding: 2em;
+  border-radius: 0.8em;
+}
+
+.track-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1em;
+}
+
+.track-title h1 {
+  color: #fff;
+  margin: 0;
+}
+
+.track-title h3 {
+  color: #6d7d8c;
+  font-weight: 600;
+  margin: 0;
+}
