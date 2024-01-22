@@ -13,17 +13,17 @@ function FreeBorPanel() {
           <h1 className={styles.item} align="center">
             FreeBotPanel
           </h1 >
-        <h1 align="center">
+        <p align="center">
               <button onClick={redirect("/Timer")}>
                 Timer
               </button>
-            <button onClick={redirect("/CommandList")}>
-              CommandList
-            </button>
-        </h1>
+              <button onClick={redirect("/CommandList")}>
+                CommandList
+              </button>
+        </p>
       </main>
     </div>
   )
 }
 
-export default withAuth(FreeBorPanel)
+export default FreeBorPanel

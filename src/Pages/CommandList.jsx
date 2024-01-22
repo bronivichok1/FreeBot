@@ -24,5 +24,5 @@ function CommandList() {
     </div>
   )
 }
-export default withAuth(CommandList)
+export default CommandList
 
