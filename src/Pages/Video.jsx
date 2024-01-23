@@ -24,7 +24,15 @@ function Video() {
       }
         else{}
         }
-  
+  function srcCount(number){
+    if(number<videoLink.length&&number>0)
+    {
+      return videoLink[number]
+    }
+    else{
+      return videoLink[0]
+    }
+  }
   return (
     
     <div >
@@ -32,7 +40,7 @@ function Video() {
           <div align="center">
               <br/>
               <iframe width="560" height="315" 
-              src={videoLink[count]} 
+              src={srcCount(count)} 
               title="YouTube video player" f
               rameborder="1" 
               allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
