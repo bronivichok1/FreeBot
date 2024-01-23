@@ -8,7 +8,7 @@ import Home from './Home';
 import FreeBotPanel from './FreeBotPanel';
 import Music from '../Music';
 import Video from './Video';
-import VideoList from './VideoList';
+
  
 function App() {
   return (
@@ -28,7 +28,6 @@ function App() {
               <Route path="FreeBotPanel" element={<FreeBotPanel/>} />
               <Route path="Music" element={<Music/>} />
               <Route path="Video" element={<Video/>} />
-              <Route path="VideoList" element={<VideoList/>} />
 
             </Routes>
           </BrowserRouter>
