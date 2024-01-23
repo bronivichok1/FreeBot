@@ -2,12 +2,8 @@ import Header from '../components/Header'
 import { withAuth } from '../HOC/withAuth';
 import { openInNewTab } from '../providers/OpenAdress';
 import React, { useState } from 'react';
-
+import {videoLink} from './VideoList'
  function Video() {
-  
-  const syze=100
-  let videoLink=[syze]
-  videoLink=["https://www.youtube.com/embed/9bZkp7q19f0?si=40XaBkK_mnYWpdcT","https://www.youtube.com/embed/b-lb7UOJ_pM?si=seGHPbKnhauhEAiF"]
 
 
 
