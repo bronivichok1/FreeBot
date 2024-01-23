@@ -4,12 +4,13 @@ export default function Header(){
 
     return(
     <header> 
-        <div >
+        <div align="left">
             <img src='logo.jpg' alt="FreeBot"   />
-            <span>Время сейчас: {dataTime.toLocaleTimeString()}</span>   
+            <span >Время сейчас: {dataTime.toLocaleTimeString()}</span>   
         </div>
         <h1 align="right" vertical-align="top">
-          <button title="Больше информации о боте"/>
+          <button title="Больше информации о боте"></button>
+
         </h1>
         
     </header>

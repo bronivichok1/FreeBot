@@ -1,8 +1,5 @@
 import Header from '../components/Header'
-import { redirect } from 'react-router-dom';
-import { useContext } from 'react';
-import { AuthContext } from '../providers/AuthProvider';
-import { Link, BrowserRouter, Routes, Route,Navigate,useNavigate } from 'react-router-dom';
+import {  BrowserRouter, Routes, Route} from 'react-router-dom';
 import Registrate from './Registrate';
 import Login from './Login';
 import CommandList from './CommandList';

@@ -1,5 +1,4 @@
 import Header from '../components/Header'
-import { redirect } from 'react-router-dom';
 import { withAuth } from '../HOC/withAuth';
 import { openInNewTab } from '../providers/OpenAdress';
 

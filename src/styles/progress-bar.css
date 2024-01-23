@@ -30,7 +30,7 @@
 }
 
 .progress-bar input[type="range"]::-webkit-slider-runnable-track {
-  background: #152448;
+  background: #3b63be;
   background-image: linear-gradient(#38bdf8, #38bdf8);
   background-size: var(--fill-percentage, 0%) 100%;
   background-repeat: no-repeat;
@@ -42,16 +42,16 @@
   -webkit-appearance: none;
   appearance: none;
   margin-top: -5px;
-  background-color: #fff;
+  background-color: #ffffff;
   height: 1.2em;
   width: 1.2em;
   border-radius: 50%;
-  box-shadow: 0px 0px 82px 4px rgba(21, 36, 72, 1);
+  box-shadow: 0px 0px 82px 4px rgb(67, 112, 218);
 }
 
 .progress-bar input[type="range"]::-webkit-slider-thumb:hover {
-  border: 2px solid #fff;
-  background-color: #38bdf8;
+  border: 2px solid #000000;
+  background-color: #ffffff;
 }
 
 #time-progress {

@@ -1,9 +1,9 @@
 import { useState } from "react";
-import "./Music.css";
 import Player from "./components/Player";
 import Playlist from "./components/Playlist";
 import { tracks } from "./data/tracks";
 
+import "./Music.css"
 function Music() {
   const [trackIndex, setTrackIndex] = useState(0);
 

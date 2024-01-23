@@ -1,5 +1,4 @@
 import Header from '../components/Header'
-import { redirect } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import React from  'react';

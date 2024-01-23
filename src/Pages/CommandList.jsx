@@ -1,12 +1,13 @@
 import Header from '../components/Header'
 import { redirect } from 'react-router-dom';
 import { withAuth } from '../HOC/withAuth';
-const syze=10
-let i=0
-let CommandListArray=[syze]
+
 
 function CommandList() {
-
+  const syze=10
+  let i=0
+  let CommandListArray=[syze]
+  
   return (
     <div >
       <main>

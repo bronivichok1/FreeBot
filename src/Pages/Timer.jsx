@@ -1,7 +1,6 @@
 import Header from '../components/Header'
-import { redirect } from 'react-router-dom';
 import { withAuth } from '../HOC/withAuth';
-import { useContext, useState, useEffect, Component} from 'react';
+import { Component} from 'react';
 
 class CountDown extends Component {
     constructor(props) {

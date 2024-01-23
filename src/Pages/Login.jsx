@@ -1,10 +1,9 @@
 import Header from '../components/Header'
-import { redirect } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProvider';
 import React from  'react';
 import { openInNewTab } from '../providers/OpenAdress';
-import {User, CheckUser} from '../providers/CheckUser'
+import { CheckUser} from '../providers/CheckUser'
 
 function Login() {
 
