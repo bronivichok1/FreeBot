@@ -11,8 +11,16 @@ function Login() {
     
     const [inputLogin, setInputLogin] = useState('');
     const [inputPassword, setInputPassword] = useState('');
-  
-    function addData() {
+   
+    const handleChangeLogin = (event) => {
+      inputLogin(event.target.value);
+        }
+   
+        const handleChangePassword = (event) => {
+      inputPassword(event.target.value);
+        }
+    
+      function addData() {
   
       let newData = {
           Login: inputLogin,
@@ -20,6 +28,7 @@ function Login() {
       };
       return CheckUser(newData.Login,newData.Password) 
     }
+    
     function adress(){
     if(addData==1)
     {

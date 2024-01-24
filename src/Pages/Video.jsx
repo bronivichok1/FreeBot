@@ -9,7 +9,7 @@ import React, { useState, useEffect } from 'react';
 function Video() {
  
   let videoLink=["https://www.youtube.com/embed/9bZkp7q19f0?si=40XaBkK_mnYWpdcT","https://www.youtube.com/embed/b-lb7UOJ_pM?si=seGHPbKnhauhEAiF","https://www.youtube.com/embed/cEhgYbPdjkI?si=dCadj_qBpP1wD5dp"]
-  
+  let videoLink2=[]
   const [count, setCount] = useState(0)
   const [inputLink, setInputLink] = useState('');
 
@@ -18,7 +18,8 @@ function Video() {
         }
 
   function newLinkForMas(Link){
-         videoLink.push(Link)
+     
+    videoLink.push(Link)
     }
 
   function deleteLinkForMas(number){
@@ -40,10 +41,11 @@ function Video() {
       <main>
           <div align="center">
               <br/>
-              <iframe width="560" height="315" 
-              src={srcCount(count)} 
+              <iframe width="1100" height="560" 
+              src={srcCount(count)+"?autoplay=1"} 
               title="YouTube video player" 
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" >
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
+              >
               </iframe>
             <div alright="center">
               <button alright="right" onClick={() => setCount(count + 1)}>
