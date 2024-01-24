@@ -6,6 +6,7 @@ export default function Header(){
     <header> 
         <div align="left">
             <img src='logo.jpg' alt="FreeBot"   />
+            <br/>
             <span >Время сейчас: {dataTime.toLocaleTimeString()}</span>   
         </div>
         <h1 align="right" vertical-align="top">

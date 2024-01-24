@@ -1,7 +1,7 @@
 import Header from '../components/Header'
 import { withAuth } from '../HOC/withAuth';
 import { openInNewTab } from '../providers/OpenAdress';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 
@@ -16,12 +16,9 @@ function Video() {
   const handleChange = (event) => {
       setInputLink(event.target.value);
         }
-  
+
   function newLinkForMas(Link){
-      if(Link!==null){
          videoLink.push(Link)
-      }
-      else{}
     }
 
   function deleteLinkForMas(number){
