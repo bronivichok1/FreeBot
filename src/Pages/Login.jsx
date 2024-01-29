@@ -7,6 +7,20 @@ import { CheckUser} from '../providers/CheckUser'
 
 function Login() {
 
+    function clickHandler(){
+      fetch("http://localhost:3000/ConnectSQL.php",{
+        method: 'POST',
+        header: {
+          'Content-Type':'application/x-www-form-urlencoded',
+        },
+        body : JSON.stringify({action:1})
+      })
+      .then (response=>response.text())
+      .then (response=>{
+        console.log(response);
+      })
+    }
+
     const {user,setUser}=useContext(AuthContext)
     
     const [inputLogin, setInputLogin] = useState('');
@@ -57,7 +71,7 @@ function Login() {
               onChange={(event) => setInputPassword(event.target.value)}>
               </input>
             <br/>
-                <button type="submit" value="Login"  onClick={addData&&adress}>
+                <button type="submit" value="Login"  onClick={addData&&adress&&clickHandler()}>
               Login
               </button>
               
