@@ -7,14 +7,33 @@ import React, { useState, useEffect } from 'react';
 
 
 function Video() {
- 
-  let videoLink=["https://www.youtube.com/embed/9bZkp7q19f0?si=40XaBkK_mnYWpdcT","https://www.youtube.com/embed/b-lb7UOJ_pM?si=seGHPbKnhauhEAiF","https://www.youtube.com/embed/cEhgYbPdjkI?si=dCadj_qBpP1wD5dp"]
-  let videoLink2=[]
   const [count, setCount] = useState(0)
   const [inputLink, setInputLink] = useState('');
+  const[videoLink,SetvideoLink]=useState([])
+
+  function clickHandler(){
+    fetch("http://localhost:3000/ConnectSQL.php",{
+      method: 'GET',
+      header: {
+        'Content-Type':'application/x-www-form-urlencoded',
+      },
+      body : JSON.stringify()
+    })
+    .then (response=>response.text())
+    .then (response=>{ SetvideoLink(response.split('RAZDEL'));
+     })
+
+  }
+ 
+  clickHandler()
+
+ 
+  /*let arr = InfoString.split(' ');
+  Array.prototype.push.apply(arr, videoLink);*/
 
   const handleChange = (event) => {
       setInputLink(event.target.value);
+   
         }
 
   function newLinkForMas(Link){
@@ -29,7 +48,7 @@ function Video() {
   function srcCount(number){
     if(number<videoLink.length&&number>=0)
     {
-      return videoLink[number]
+      return videoLink[number-1]
     }
     else{
       return videoLink[0]&&setCount(0)
@@ -42,7 +61,7 @@ function Video() {
           <div align="center">
               <br/>
               <iframe width="1100" height="560" 
-              src={srcCount(count)+"?autoplay=1"} 
+              src={srcCount(count)} 
               title="YouTube video player" 
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
               >
