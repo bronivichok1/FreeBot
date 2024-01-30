@@ -13,21 +13,17 @@ function Video() {
 
   function clickHandler(){
     fetch("http://localhost:3000/ConnectSQL.php",{
-      method: 'GET',
-      header: {
-        'Content-Type':'application/x-www-form-urlencoded',
-      },
+      method: 'POST',
+
       body : JSON.stringify()
+      
     })
     .then (response=>response.text())
     .then (response=>{ SetvideoLink(response.split('RAZDEL'));
      })
 
   }
- 
-  clickHandler()
 
- 
   /*let arr = InfoString.split(' ');
   Array.prototype.push.apply(arr, videoLink);*/
 
@@ -72,6 +68,9 @@ function Video() {
               </button>
               <button alright="left" onClick={() => setCount(count - 1)} >
                 Back
+              </button>
+              <button alright="left" onClick={clickHandler()} >
+                Refreash List
               </button>
             </div>
                 <div >
