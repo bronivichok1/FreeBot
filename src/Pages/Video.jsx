@@ -11,7 +11,30 @@ function Video() {
   const [inputLink, setInputLink] = useState('');
   const[videoLink,SetvideoLink]=useState([])
 
-  function clickHandler(){
+    function SendRequest(method,url,body=null){
+      return fetch(url).then(response=>{
+        return response.text()
+      })
+    }
+    SendRequest('POST','http://localhost:3000/ConnectSQL.php')
+    .then(data=>SetvideoLink(data.split(' ')))
+
+    const requestURL='http://localhost:3000/ConnectSQL.php'
+    function goAuth(method,url,body=null){
+      return new Promise((resolve,reject)=> {
+      const xhr=new XMLHttpRequest()
+      xhr.open(method,url)
+      xhr.responseType='json'
+      xhr.onload=()=>{
+        resolve(xhr.response)
+      }
+      xhr.onerror=()=>{
+        reject(xhr.response)
+      }
+      xhr.send(JSON.stringify(body))
+    })}
+    goAuth('GET',requestURL);
+  /*function clickHandler(){
     fetch("http://localhost:3000/ConnectSQL.php",{
       method: 'POST',
 
@@ -19,11 +42,11 @@ function Video() {
       
     })
     .then (response=>response.text())
-    .then (response=>{ SetvideoLink(response.split('RAZDEL'));
+    .then (response=>{ SetvideoLink(response.split(' '));
      })
 
   }
-
+*/
   /*let arr = InfoString.split(' ');
   Array.prototype.push.apply(arr, videoLink);*/
 
@@ -68,9 +91,6 @@ function Video() {
               </button>
               <button alright="left" onClick={() => setCount(count - 1)} >
                 Back
-              </button>
-              <button alright="left" onClick={clickHandler()} >
-                Refreash List
               </button>
             </div>
                 <div >

@@ -40,6 +40,54 @@ function Login() {
     }
 
     }
+
+    /*ajax(
+      {
+        url: 'http://localhost:3000/ConnectSQL.php',
+        type: 'POST',
+        dataType:'json',
+        data:{
+          Login: inputLogin,
+          Password: inputPassword,
+        },success: function(){
+          (openInNewTab('/Home'))
+        }
+      }
+    )*/
+    let newData = {
+        Login: inputLogin,
+        Password: inputPassword
+    };
+    /*
+    const requestURL='http://localhost:3000/ConnectSQL.php'
+    function goAuth(method,url,body=null){
+      return new Promise((resolve,reject)=> {
+      const xhr=new XMLHttpRequest()
+      xhr.open(method,url)
+      xhr.responseType='json'
+      xhr.onload=()=>{
+        resolve(xhr.response)
+      }
+      xhr.onerror=()=>{
+        reject(xhr.response)
+      }
+      xhr.send(JSON.stringify(body))
+    })}
+
+    function StratLog(){
+    goAuth('POST',requestURL,newData)
+    .then(data=>console.log(data))
+    .catch(err=>console.log(err))
+  
+  }*/
+  function SendRequest(method,url,body=null){
+    return fetch(url).then(response=>{
+      return response.text()
+    })
+  }
+  SendRequest('POST','http://localhost:3000/ConnectSQL.php')
+  .then(data=>SetvideoLink(data.split(' ')))
+
     return (
     <div >
       <main>
@@ -58,7 +106,7 @@ function Login() {
               onChange={(event) => setInputPassword(event.target.value)}>
               </input>
             <br/>
-                <button type="submit" value="Login"  onClick={addData&&adress}>
+                <button type="submit" value="Login"  onClick={addData}>
               Login
               </button>
               
